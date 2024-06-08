@@ -5,7 +5,7 @@ interface Props extends React.PropsWithChildren {
   show: boolean;
   title: string;
   onClose: React.MouseEventHandler;
-  buttons: ButtonProps[];
+  buttons?: ButtonProps[];
 }
 
 const Modal: React.FC<Props> = ({show, title, onClose, buttons, children}) => {

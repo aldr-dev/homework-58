@@ -7,7 +7,6 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   const [showAlert, setShowAlert] = useState(true);
 
-
   const modalButtons: ButtonProps[] = [
     {type: 'primary', label: 'Continue', onClick: () => alert('Hello! Have a good day :)')},
     {type: 'danger', label: 'Close', onClick: () => setShowModal(false)},

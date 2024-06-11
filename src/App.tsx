@@ -24,17 +24,17 @@ const App = () => {
         </Modal>
       </div>
 
-      {showAlert ? (
-        <>
-          <Alert type="warning" onDismiss={() => setShowAlert(false)}>
-            This is a warning type alert
-          </Alert>
-        </>
-      ) : null}
+      {!showModal && showAlert && (
+        <Alert type="warning" onDismiss={() => setShowAlert(false)}>
+          This is a warning type alert
+        </Alert>
+      )}
 
-      <Alert type="success">
-        This is a success type alert
-      </Alert>
+      {!showModal && (
+        <Alert type="success">
+          This is a success type alert
+        </Alert>
+      )}
     </div>
   );
 };
